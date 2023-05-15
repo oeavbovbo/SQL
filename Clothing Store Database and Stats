@@ -1,0 +1,31 @@
+--Create a grocery store database 
+
+CREATE TABLE clothing (ID INTEGER PRIMARY KEY,MEDUIM TEXT, AISLE INTEGER, PRICE INTEGER);
+
+INSERT INTO clothing values (1,"dresses", 1, 15);
+INSERT INTO clothing values (2,"tops", 1, 10);
+INSERT INTO clothing values (3, "leggings", 2,20);
+INSERT INTO clothing values (4,"jeans", 2, 15);
+INSERT INTO clothing values (5,"skirts", 3, 10);
+INSERT INTO clothing values (6,"skorts",3,10);
+INSERT INTO clothing values (7,"shorts", 4, 7);
+INSERT INTO clothing values (8,"camisoles", 4, 15);
+INSERT INTO clothing values (9,"shirts", 5, 10);
+INSERT INTO clothing values (10, "boxers", 5,20);
+INSERT INTO clothing values (11,"underwear", 6, 15);
+INSERT INTO clothing values (12,"pants", 6, 10);
+INSERT INTO clothing values (13,"bodysuits",7,10);
+INSERT INTO clothing values (14,"blouses", 7, 7);
+INSERT INTO clothing values (15,"sweaters", 8, 7);
+
+--Display the database ordered by aisle 
+SELECT * FROM clothing ORDER BY AISLE desc;
+
+--Display the sum of all items of clothing in the store
+SELECT SUM(PRICE) FROM clothing;
+
+--Display the items of clothing that are at least 10 dollars. 
+SELECT * FROM clothing WHERE PRICE >=10;
+
+--What is the average price of clothing items in the aisle section numbers that are less than or equal to 3?
+SELECT AVG (price) "avg item price" FROM clothing WHERE aisle <=3;
